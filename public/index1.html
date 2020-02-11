@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- 
+	HI, PROGGER <3
+-->
+<html>
+<head>
+	<title>;-)</title>
+	<style type="text/css">
+		body {
+			background-color: #222;
+			color: #F5FFF5;
+			font-family: verdana, arial, helvetica;
+			text-align: center;
+		}
+		h1 {
+			font-weight: normal;
+			font-size: 8pt;
+			margin-top: 20%;
+			text-shadow: #F5FFF5 0px 0px 3px;
+		}
+		a {
+			color: #ff0082;
+			font-weight: normal;
+			font-size: 8pt;
+			margin-top: 20%;
+			text-shadow: #F5FFF5 0px 0px 3px;
+		}
+		#love {
+			margin-top: 4em;
+			position: relative;
+		}
+		#love p {
+			width: 100%;
+			text-align: center;
+			position: absolute;
+			display: none;
+			color: #fff;
+			font-size: 7pt;
+			text-shadow: #fff 0px 0px 3px;
+		}
+		.lt3 {
+			color: #F5FFF5;
+			text-shadow: #F5FFF5 0px 0px 3px;
+		}
+	</style>
+</head>
+<body>
+
+<h1>Санта настраивает свои санки и усиленно кормит оленей... Осталось совсем чуть-чуть...</h1>
+<center><img src="http://adm.gw-zone.ru/pics/santa.png"></center>
+
+<div id="love">
+	<p>Чудеса случаются!</p>
+	<p>Не зли Санту!</p>
+	<p>Ты хорошо себя вёл в этом году, %username%</p>
+	<p>Хочешь помочь Санте?</p>
+	<p>Подарки - хорошим детишкам!</p>
+	<p>Раз, два, три, ёлочка - гори!</p>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+	(function(){
+		var ps = $('#love p:not(.current)');
+		$('#love p.current').removeClass('current').slideUp('fast');
+		$(ps[Math.floor(Math.random() * ps.length)]).addClass('current').slideDown('fast');
+		setTimeout(arguments.callee, 4000);
+	})();
+</script>
+
+</body>
+</html>
